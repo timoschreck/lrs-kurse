@@ -649,6 +649,26 @@ body::after {
 }
 
 
+/* Hinweiskarte für individuelle Kurse */
+.termin-hinweis {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #FFF9E6;: #FFF9E6;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-style: italic;
+}
+
+.termin-hinweis .stern {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
 /* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
   /* Stack header elements vertically */
@@ -685,11 +705,11 @@ body::after {
   .familie-section .text {
     flex: 0 0 100%;
   }
-  /* Make date cards fill available width */
+  /* MZake date cards fill available width */
   .termine-grid {
     flex-direction: column;
     align-items: center;
-  }
+  Make
   .termin-card {
     width: 100%;
     max-width: 320px;
