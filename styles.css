@@ -263,7 +263,8 @@ body {
 
 .termin-card {
   background: #FFFFFF;
-  border: 2px solid var(--secondary-color);
+  /* Neuer Rahmen in Graugrün statt der bisherigen Akzentfarbe */
+  border: 2px solid #6e7368;
   border-radius: var(--border-radius);
   padding: 1.5rem;
   width: 280px;
@@ -379,7 +380,8 @@ body {
 */
 section h2 {
   display: inline-block;
-  background-color: #c2e9ff;
+  /* Rahmen‑Farbe und Füllung für Überschriften: neues Graugrün */
+  background-color: #6e7368;
   /* Die Schriftfarbe innerhalb des Rahmens ist identisch mit der CTA‑Farbe */
   color: #fdc830;
   padding: 0.5rem 1rem;
@@ -389,7 +391,8 @@ section h2 {
 
 /* Optional: Gleiche Optik für h3‑Überschriften in Termin‑Karten */
 .termin-card h3 {
-  background-color: #c2e9ff;
+  /* Rahmen‑Farbe und Füllung für Termin‑Karten‑Titel */
+  background-color: #6e7368;
   /* Auch in Karten erhält der Text innerhalb des Rahmens den gelben Farbton */
   color: #fdc830;
   display: inline-block;
