@@ -94,7 +94,7 @@ body {
     Verlaufsfunktion dient als semitransparente Überlagerung, damit der Text
     gut lesbar bleibt. Das Bild wird im Ordner der Website gespeichert.
   */
-  background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(160, 212, 255, 0.8)), url('hero-bg.png');
+  background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(160, 212, 255, 0.8)), url('hero-bg-photo.png');
   background-size: cover;
   background-position: center;
   color: var(--text-light);
