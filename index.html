@@ -241,7 +241,57 @@
             <p><strong>E‑Mail:</strong> <a href="mailto:office@lrs-kurse.de">office@lrs-kurse.de</a></p>
             <p><strong>Standort:</strong> Mannheim – Kurse für Baden‑Württemberg, Rheinland‑Pfalz und Hessen</p>
           </div>
-          <a href="mailto:office@lrs-kurse.de?subject=Anmeldung%20LRS‑Intensivkurs" class="cta-button secondary">Jetzt Platz sichern</a>
+          <!-- Kontaktformular -->
+          <form class="contact-form" action="mailto:office@lrs-kurse.de" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="interesse">Ich interessiere mich für:</label>
+              <select id="interesse" name="Interesse">
+                <option value="6-Tage-LRS-Kurs">6‑Tage‑LRS‑Kurs</option>
+                <option value="Kooperation">Kooperation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="vorname">Vorname:</label>
+              <input type="text" id="vorname" name="Vorname" required>
+            </div>
+            <div class="form-group">
+              <label for="nachname">Nachname:</label>
+              <input type="text" id="nachname" name="Nachname" required>
+            </div>
+            <div class="form-group">
+              <label>Ich wünsche die Kontaktaufnahme:</label>
+              <div class="radio-group">
+                <label><input type="radio" name="Kontaktaufnahme" value="per WhatsApp" checked> per WhatsApp</label>
+                <label><input type="radio" name="Kontaktaufnahme" value="per Mail"> per Mail</label>
+                <label><input type="radio" name="Kontaktaufnahme" value="Bitte um Rückruf"> Bitte um Rückruf</label>
+              </div>
+            </div>
+            <div class="form-group" id="callback-time" style="display:none;">
+              <label for="wunschzeit">Wunschzeit:</label>
+              <input type="text" id="wunschzeit" name="Wunschzeit" placeholder="z. B. 14:00 – 16:00 Uhr">
+            </div>
+            <div class="form-group">
+              <label for="email">E‑Mail:</label>
+              <input type="email" id="email" name="E-Mail" required>
+            </div>
+              
+            <div class="form-group">
+              <label for="telefon">Telefonnummer:</label>
+              <input type="tel" id="telefon" name="Telefon">
+            </div>
+            <div class="form-group">
+              <label for="erreichbarkeit">Erreichbarkeit:</label>
+              <input type="text" id="erreichbarkeit" name="Erreichbarkeit" placeholder="z. B. werktags 9–18 Uhr">
+            </div>
+            <div class="form-group">
+              <label for="nachricht">Ihre Nachricht (max. 250 Zeichen):</label>
+              <textarea id="nachricht" name="Nachricht" maxlength="250" rows="4"></textarea>
+            </div>
+            <button type="submit" class="cta-button secondary">Absenden</button>
+          </form>
+          <!-- Ende Kontaktformular -->
+
+          <a href="mailto:office@lrs-kurse.de?subject=Anmeldung%20LRS‑Intensivkurs" class="cta-button secondary" style="margin-top: 1rem;">Jetzt Platz sichern</a>
       </div>
     </section>
 
@@ -261,6 +311,23 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Steuerung des Wunschzeit‑Feldes beim Kontaktformular
+      document.addEventListener('DOMContentLoaded', function () {
+        const radios = document.querySelectorAll('input[name="Kontaktaufnahme"]');
+        const callbackTime = document.getElementById('callback-time');
+        radios.forEach(function (radio) {
+          radio.addEventListener('change', function () {
+            if (this.value === 'Bitte um Rückruf' && this.checked) {
+              callbackTime.style.display = 'block';
+            } else if (this.checked) {
+              callbackTime.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
 
     <!-- Floating WhatsApp Button -->
     <!--

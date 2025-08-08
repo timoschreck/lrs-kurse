@@ -544,6 +544,51 @@ body {
   white-space: nowrap;
 }
 
+/* Kontaktformular */
+.contact-form {
+  margin-top: 2rem;
+  max-width: 700px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .radio-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-form .radio-group label {
+  font-weight: normal;
+}
+
+.contact-form button.cta-button {
+  margin-top: 0.5rem;
+}
+
 /*
   Wasserzeichen-Overlay
   Das halbtransparente Logo wird über dem gesamten Inhalt angezeigt, bleibt beim
