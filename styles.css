@@ -434,6 +434,24 @@ body {
   font-weight: bold;
 }
 
+/* Über mich Section */
+.ueber-section {
+  padding: var(--section-padding) 0;
+  background-color: #F9FBFE;
+}
+
+.ueber-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.ueber-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
 /* Footer */
 .site-footer {
   background: #1E2A38;
