@@ -87,7 +87,14 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  /*
+    Set a background image of fröhliche Kinder, die Bücher lesen. Die lineare
+    Verlaufsfunktion dient als semitransparente Überlagerung, damit der Text
+    gut lesbar bleibt. Das Bild wird im Ordner der Website gespeichert.
+  */
+  background: linear-gradient(rgba(74, 144, 226, 0.8), rgba(160, 212, 255, 0.8)), url('hero-bg.png');
+  background-size: cover;
+  background-position: center;
   color: var(--text-light);
   text-align: center;
   padding: 6rem 0 5rem 0;
