@@ -452,6 +452,23 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* Zitierten Text im Über-mich-Abschnitt hervorheben */
+.ueber-section .quote {
+  font-style: italic;
+  quotes: "\201C" "\201D";
+}
+
+/* Porträt im Über-mich-Abschnitt freistellen: runde Form */
+.ueber-section .portrait {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 160px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-top: 1rem;
+}
+
 /* Footer */
 .site-footer {
   background: #1E2A38;
