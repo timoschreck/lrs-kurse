@@ -5,7 +5,8 @@
 
 :root {
   --primary-color: #FFB300; /* Goldgelb */
-  --secondary-color: #FF7E00; /* Orange */
+  /* Primärfarbe für CTAs und Hervorhebungen (ersetzt das bisherige Orange) */
+  --secondary-color: #fdc830; /* Gelbton für Buttons und Icons */
   --bg-gradient-start: #4A90E2; /* Blau‑Gradient Start */
   --bg-gradient-end: #A0D4FF; /* Blau‑Gradient Ende */
   --text-dark: #333333;
@@ -364,6 +365,35 @@ body {
 
 .kontakt-info a:hover {
   text-decoration: underline;
+}
+
+/*
+  Rahmen für Überschriften
+  Alle Abschnittsüberschriften sollen in einem farbigen Kasten mit
+  abgerundeten Ecken erscheinen. Die Farbe orientiert sich am
+  Grundfarbton des Layouts (#c2e9ff). Damit die Texte weiterhin
+  gut lesbar bleiben, wird die Schriftfarbe auf den dunklen
+  Standard gesetzt. Diese Regel gilt für h2‑Überschriften innerhalb
+  von Abschnitten, nicht jedoch für den großen Titel im Hero‑Bereich
+  oder für Überschriften im Footer/Impressum.
+*/
+section h2 {
+  display: inline-block;
+  background-color: #c2e9ff;
+  color: var(--text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+}
+
+/* Optional: Gleiche Optik für h3‑Überschriften in Termin‑Karten */
+.termin-card h3 {
+  background-color: #c2e9ff;
+  color: var(--text-dark);
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
 }
 
 /* Erkennen, Potenzial & Familie Sections */
