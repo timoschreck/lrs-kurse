@@ -362,6 +362,78 @@ body {
   text-decoration: underline;
 }
 
+/* Erkennen, Potenzial & Familie Sections */
+.erkennen-section,
+.potenzial-section,
+.familie-section {
+  padding: var(--section-padding) 0;
+  background-color: #FFFFFF;
+}
+
+.erkennen-section:nth-of-type(even),
+.potenzial-section:nth-of-type(even),
+.familie-section:nth-of-type(even) {
+  background-color: #F9FBFE;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.erkennen-section img,
+.potenzial-section img,
+.familie-section img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: var(--border-radius);
+  flex: 0 0 350px;
+}
+
+.erkennen-section .text,
+.potenzial-section .text,
+.familie-section .text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.erkennen-section h2,
+.potenzial-section h2,
+.familie-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.erkennen-list,
+.potenzial-list,
+.familie-list {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.erkennen-list li,
+.potenzial-list li,
+.familie-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.erkennen-list li::before,
+.potenzial-list li::before,
+.familie-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
 /* Footer */
 .site-footer {
   background: #1E2A38;
