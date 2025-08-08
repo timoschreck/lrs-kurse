@@ -380,7 +380,8 @@ body {
 section h2 {
   display: inline-block;
   background-color: #c2e9ff;
-  color: var(--text-dark);
+  /* Die Schriftfarbe innerhalb des Rahmens ist identisch mit der CTA‑Farbe */
+  color: #fdc830;
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   margin-bottom: 1.5rem;
@@ -389,7 +390,8 @@ section h2 {
 /* Optional: Gleiche Optik für h3‑Überschriften in Termin‑Karten */
 .termin-card h3 {
   background-color: #c2e9ff;
-  color: var(--text-dark);
+  /* Auch in Karten erhält der Text innerhalb des Rahmens den gelben Farbton */
+  color: #fdc830;
   display: inline-block;
   padding: 0.3rem 0.7rem;
   border-radius: var(--border-radius);
