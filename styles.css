@@ -10,7 +10,8 @@
   --bg-gradient-end: #A0D4FF; /* Blau‑Gradient Ende */
   --text-dark: #333333;
   --text-light: #FFFFFF;
-  --font-body: 'Arial', sans-serif;
+  /* Verwende die Quicksand-Schriftfamilie für den Fließtext */
+  --font-body: 'Quicksand', sans-serif;
   --section-padding: 4rem;
   --border-radius: 8px;
 }
@@ -25,7 +26,8 @@ body {
   font-family: var(--font-body);
   color: var(--text-dark);
   line-height: 1.6;
-  background-color: #FAFAFA;
+  /* Setze die Grundfarbe des Hintergrundes auf ein helles Blau (#c2e9ff) */
+  background-color: #c2e9ff;
   /* Positionierungskontext für das Wasserzeichen */
   position: relative;
 }
