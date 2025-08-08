@@ -647,3 +647,59 @@ body::after {
   pointer-events: none;
   z-index: 1;
 }
+
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  /* Stack header elements vertically */
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  /* Reduce hero font sizes for small screens */
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content .subtitle {
+    font-size: 1.1rem;
+  }
+  /* Stack content sections vertically */
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .erkennen-section img,
+  .potenzial-section img,
+  .familie-section img,
+  .ueber-section .portrait {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .erkennen-section .text,
+  .potenzial-section .text,
+  .familie-section .text {
+    flex: 0 0 100%;
+  }
+  /* Make date cards fill available width */
+  .termine-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .termin-card {
+    width: 100%;
+    max-width: 320px;
+  }
+  /* Adjust contact form and radio group for narrow screens */
+  .contact-form {
+    max-width: 100%;
+  }
+  .contact-form .radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
