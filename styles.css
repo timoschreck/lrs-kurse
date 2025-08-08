@@ -26,6 +26,8 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   background-color: #FAFAFA;
+  /* Positionierungskontext für das Wasserzeichen */
+  position: relative;
 }
 
 .container {
@@ -540,4 +542,26 @@ body {
 
 .whatsapp-button span {
   white-space: nowrap;
+}
+
+/*
+  Wasserzeichen-Overlay
+  Das halbtransparente Logo wird über dem gesamten Inhalt angezeigt, bleibt beim
+  Scrollen fixiert und stört dank geringer Deckkraft die Lesbarkeit der
+  Inhalte nicht. Das Overlay fängt Berührungen nicht ab (pointer-events: none).
+*/
+body::after {
+  content: '';
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 700px;
+  height: 700px;
+  background-image: url('images/watermark.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 1;
 }
