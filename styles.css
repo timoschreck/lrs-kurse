@@ -1,0 +1,278 @@
+/*
+  Allgemeines Stylesheet für die LRS‑Kurse‑Landingpage.
+  Definiert Farben, Schriftarten und Layouts für ein modernes, freundliches Erscheinungsbild.
+*/
+
+:root {
+  --primary-color: #FFB300; /* Goldgelb */
+  --secondary-color: #FF7E00; /* Orange */
+  --bg-gradient-start: #4A90E2; /* Blau‑Gradient Start */
+  --bg-gradient-end: #A0D4FF; /* Blau‑Gradient Ende */
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  --font-body: 'Arial', sans-serif;
+  --section-padding: 4rem;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #FAFAFA;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-light);
+  text-align: center;
+  padding: 6rem 0 5rem 0;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero-content .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--primary-color);
+}
+
+.cta-button.secondary {
+  background: var(--primary-color);
+}
+
+/* Kurs Section */
+.kurs-section {
+  padding: var(--section-padding) 0;
+  background-color: #FFFFFF;
+}
+
+.kurs-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.kurs-section p {
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Termine Section */
+.termine-section {
+  padding: var(--section-padding) 0;
+  background-color: #F3F8FF;
+}
+
+.termine-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.termine-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.termin-card {
+  background: #FFFFFF;
+  border: 2px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.termin-card h3 {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.termin-card p {
+  font-size: 0.95rem;
+}
+
+.termin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.termine-section .hinweis {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-style: italic;
+  color: #666666;
+}
+
+/* Förderung Section */
+.foerderung-section {
+  padding: var(--section-padding) 0;
+  background-color: #FFFFFF;
+}
+
+.foerderung-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.foerderung-section p {
+  max-width: 900px;
+  margin: 0.5rem auto;
+}
+
+.foerderung-list {
+  list-style: none;
+  max-width: 900px;
+  margin: 1rem auto;
+  padding-left: 0;
+}
+
+.foerderung-list li {
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.foerderung-list li::before {
+  content: '📌';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Kontakt Section */
+.kontakt-section {
+  padding: var(--section-padding) 0;
+  background-color: #F3F8FF;
+  text-align: center;
+}
+
+.kontakt-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.kontakt-section p {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+}
+
+.kontakt-info {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.kontakt-info p {
+  margin-bottom: 0.5rem;
+}
+
+.kontakt-info a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.kontakt-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  background: #1E2A38;
+  color: var(--text-light);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
