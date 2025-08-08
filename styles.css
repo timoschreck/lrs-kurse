@@ -477,3 +477,28 @@ body {
   text-align: center;
   font-size: 0.9rem;
 }
+
+/* Impressum styling inside footer */
+.site-footer .impressum {
+  margin-top: 1rem;
+  text-align: left;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.site-footer .impressum h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.site-footer .impressum a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+.site-footer .impressum a:hover {
+  text-decoration: underline;
+}
